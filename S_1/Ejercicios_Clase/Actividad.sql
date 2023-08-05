@@ -32,7 +32,7 @@ CREATE TABLE Hotel (
 -- Tabla: Room
 -- Descripción: Almacena información sobre las habitaciones del hotel.
 -- Columnas:
--- - roomNo: Número único que identifica cada habitación.
+-- - roomNo: Número único que identifica cada habitación (Debe estar entre 1 y 120).
 -- - hotelNo: Número del hotel al que pertenece la habitación (foránea a la tabla Hotel).
 -- - roomType: Tipo de habitación (opciones: Single, Double, Family).
 -- - price: Precio de la habitación (debe estar entre 10 y 100).
