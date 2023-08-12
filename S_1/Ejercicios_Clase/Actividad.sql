@@ -38,9 +38,10 @@ CREATE TABLE Hotel (
 -- - price: Precio de la habitación (debe estar entre 10 y 100).
 CREATE TABLE Room (
     roomNo INT PRIMARY KEY CHECK (roomNo BETWEEN 1 AND 120),
+    --roomNo INT PRIMARY KEY CHECK (roomNo >= 1 AND roomNo <= 120),
     hotelNo INT,
     roomType VARCHAR(50) NOT NULL CHECK (roomType IN ('Single', 'Double', 'Family')),
-    price DECIMAL(10, 2) NOT NULL CHECK (price BETWEEN 10 AND 100),
+    price NUMERIC(5, 2) NOT NULL CHECK (price BETWEEN 10 AND 100), --1234506789,22
     FOREIGN KEY (hotelNo) REFERENCES Hotel(hotelNo)
 );
 
